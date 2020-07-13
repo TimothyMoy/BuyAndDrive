@@ -3,8 +3,12 @@ const app = express();
 
 const PORT = process.env.PORT || 4000;
 
+app.use(express.static(__dirname + '/public'));
+
 //--View Engine Configuration--
 app.set('view engine', 'ejs');
+
+app.use(express.static(`${__dirname}/public`));
 
 //--Routes--
 app.get('/', (req,res)=>{
