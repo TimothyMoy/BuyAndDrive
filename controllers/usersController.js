@@ -5,20 +5,33 @@ const db = require('../models');
 //--User Index--
 
 router.get('/', (req,res)=>{
-  res.render('users/index');
-});
+    res.render('users/index');
+  });
+
 
 //--User New--
 
-router.get('/signin', (req,res)=>{
+router.get('/signup', (req,res)=>{
   res.render('users/new');
 });
 
+//--User Show--
+router.get('/:id', (req,res)=>{
+  db.users.find({}, (err, allUsers)=>{
+    if(err) return console.log(err);
+    res.render('users/show', {
+      users: allUsers,
+    });
+  });
+});
+
 //--User Create--
-router.post('/', (req,res)=>{
+router.post('/:id', (req,res)=>{
   db.users.create(req.body, (err, newUser)=>{
     if(err) return console.log(err);
-    res.redirect('/users');
+    res.render('users/show', {
+      user: newUser,
+    });
   });
 });
 
