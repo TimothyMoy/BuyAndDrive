@@ -3,6 +3,10 @@ body {
   background-color: #7292E6;
 }
 
+h1 {
+  font-family: 'Oleo Script', cursive;
+}
+
 table {
   margin-left: auto;
   margin-right: auto;
