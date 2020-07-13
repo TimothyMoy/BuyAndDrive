@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/main.css">
   <title>Profile Page</title>
 </head>
 <body>
@@ -10,19 +11,19 @@
     <a href="/"><h1>Buy & Drive</h1></a>
     <img src="https://picsum.photos/200/?random=1"/>
     <p><%= user.name %></p>
-    <a href="/users/signin"><button>Sign Out</button></a>
+    <a href="/users/"><button>Sign Out</button></a>
   </nav>
   <main>
     <h2>Profile</h2>
     <img src="https://picsum.photos/200/?random=1"/>
     <ul>
-      <li>username</li>
-      <li>email</li>
-      <li>id</li>
+      <li><%= user.name %></li>
+      <li><%= user.email %></li>
       <button>Sell cars</button>
     </ul>
 
     <h3>cars</h3>
+    <button>Edit cars</button>
     <img src="https://picsum.photos/200/?random=2"/>
   </main>
 </body>
