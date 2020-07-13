@@ -3,27 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Page</title>
+  <title>Sign in</title>
 </head>
 <body>
   <nav>
-    <h1>Buy & Drive</h1>
-    <img src="https://picsum.photos/200/?random=1"/>
-    <p>username</p>
-    <button>Sign Out</button>
+    <a href="/"><h1>Buy & Drive</h1></a>
+    <button>Sign in</button>
   </nav>
   <main>
-    <h2>Profile</h2>
-    <img src="https://picsum.photos/200/?random=1"/>
-    <ul>
-      <li>username</li>
-      <li>email</li>
-      <li>id</li>
-      <button>Sell cars</button>
-    </ul>
-
-    <h3>cars</h3>
-    <img src="https://picsum.photos/200/?random=2"/>
-  </main>
+    <!--Should be sign in page-->
+    <h1>Sign In</h1>
+    <form action="/users/show" method="POST">
+      <label for="name">Username</label>
+      <input type="text" id="name" name="name"/>
+      <label for="email">email</label>
+      <input type="text" id="email" name="email"/>
+      
+      <button type="submit">Sign In</button>
+    </form>
+    <a href="/users/new">If you don't have an account sign up here!</a>
+    
 </body>
 </html>

@@ -22,6 +22,7 @@ app.get('/', (req,res)=>{
   res.render('index');
 });
 
+//--User Routes--
 app.use('/users', userCtrl);
 
 //--Server Listener--
