@@ -10,8 +10,16 @@ router.get('/', (req,res)=>{
 
 //--User New--
 
-router.get('/new', (req,res)=>{
+router.get('/signin', (req,res)=>{
   res.render('users/new');
+});
+
+//--User Create--
+router.post('/', (req,res)=>{
+  db.users.create(req.body, (err, newUser)=>{
+    if(err) return console.log(err);
+    res.redirect('/users');
+  });
 });
 
 module.exports = router;
