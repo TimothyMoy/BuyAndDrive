@@ -1,10 +1,12 @@
-const express = require('express')
+const express = require('express');
+const methodOverride = require('method-override');
 const app = express();
-
 const PORT = process.env.PORT || 4000;
 
 
 app.use(express.static(__dirname + '/public'));
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({extended:false}));
 
 //--Controllers--
 const userCtrl = require('./controllers/usersController');
