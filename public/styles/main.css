@@ -2,18 +2,12 @@ body {
   text-align: center;
 }
 
-ul {
-  list-style-type: none;
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
 }
 
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
+td {
+  padding: 70px;
 }
