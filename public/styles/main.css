@@ -1,3 +1,14 @@
 body {
   text-align: center;
+  background-color: #7292E6;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+td {
+  padding: 70px;
 }
