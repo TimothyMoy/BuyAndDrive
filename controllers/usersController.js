@@ -16,7 +16,7 @@ router.get('/signup', (req,res)=>{
 });
 
 //--User Show--
-router.get('/:id', (req,res)=>{
+router.get('show/:id', (req,res)=>{
   db.users.find({}, (err, allUsers)=>{
     if(err) return console.log(err);
     res.render('users/show', {
@@ -26,7 +26,7 @@ router.get('/:id', (req,res)=>{
 });
 
 //--User Create--
-router.post('/:id', (req,res)=>{
+router.post('/show', (req,res)=>{
   db.users.create(req.body, (err, newUser)=>{
     if(err) return console.log(err);
     res.render('users/show', {
