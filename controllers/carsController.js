@@ -26,8 +26,8 @@ router.get('/:id', (req,res)=>{
   .exec((err, foundCar)=>{
     res.render('cars/show',{
       cars: foundCar,
-    })
-  })
+    });
+  });
 });
 
 
@@ -39,5 +39,25 @@ router.post('/', (req,res)=>{
   });
 });
 
+//--Car Edit--
+router.get('/:id/edit', (req, res)=>{
+  db.cars.findById(req.params.id, (err,foundCar)=> {
+    res.render('cars/edit',{
+      cars: foundCar,
+    });
+  });
+});
+
+//--Car Update--
+router.put('/:id', (req,res)=>{
+  db.cars.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {new: true},
+    (err,updatedCar)=>{
+      res.redirect('/cars');
+    }
+  );
+});
 
 module.exports = router;

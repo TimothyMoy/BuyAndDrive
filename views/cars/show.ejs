@@ -7,6 +7,9 @@
   <title>Car info</title>
 </head>
 <body>
+  <nav>
+    <a href="/"><h1>Buy & Drive</h1></a>
+  </nav>
   <h1>Car</h1>
   <img src="https://picsum.photos/200/?random=1"/>
  <p>Make: <%= cars.make %> </p> 
@@ -14,5 +17,10 @@
  <p>MPG: <%= cars.mpg %> </p> 
  <p>Miles Driven: <%= cars.milesDriven %> </p> 
  <p>Proposed Price: <%= cars.proposedPrice %> </p> 
+
+ <a href="/cars/<%= cars._id %>/edit">
+ <button>Edit</button>
+</a>
+
 </body>
 </html>
