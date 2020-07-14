@@ -11,6 +11,7 @@ app.use(express.urlencoded({extended:false}));
 //--Controllers--
 const userCtrl = require('./controllers/usersController');
 
+const carsCtrl = require('./controllers/carsController');
 
 //--View Engine Configuration--
 app.set('view engine', 'ejs');
@@ -24,6 +25,8 @@ app.get('/', (req,res)=>{
 
 //--User Routes--
 app.use('/users', userCtrl);
+
+app.use('/cars', carsCtrl);
 
 //--Server Listener--
 app.listen(PORT,()=> console.log(`This server is running on port ${PORT}`));
