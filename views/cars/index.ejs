@@ -13,13 +13,13 @@
 
   <% if (cars.length) { %> 
     <% cars.forEach(car =>{ %> 
-      <h4>
-        <%= car.make %>
-      </h4>
+      <a href="/cars/<%= car._id  %>">
+      <h4><%= car.make %></h4>
+    </a>
     <% }) %> 
   <% } else { %> 
     <h4>No cars found</h4>
   <% } %> 
-  
+
 </body>
 </html>

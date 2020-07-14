@@ -22,15 +22,13 @@ router.get('/new',(req,res)=>{
 //--Cars Show--
 router.get('/:id', (req,res)=>{
   db.cars.findById(req.params.id)
-  .populate({part: 'cars'})
+  .populate({path: 'cars'})
   .exec((err, foundCar)=>{
     res.render('cars/show',{
       cars: foundCar,
     })
   })
 });
-
-
 
 
 //--Car Create--
