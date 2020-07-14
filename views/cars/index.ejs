@@ -4,29 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/main.css">
-  <title>Add Car</title>
+  <title>Car list</title>
 </head>
 <body>
-  <nav>
-    <a href="/"><h1>Buy & Drive</h1></a>
-  </nav>
-  <main>
-    <!--Should be sign in page-->
-    <h1>Add Car</h1>
-    <form action="/cars/show" method="POST">
-      <label for="make">Make</label>
-      <input type="text" id="name" name="make"/>
-      <label for="model">Model</label>
-      <input type="text" id="name" name="model"/>
-      <label for="milesDriven">Miles driven</label>
-      <input type="number" id="milesDriven" name="milesDriven"/>
-      <label for="mpg">MPG</label>
-      <input type="number" id="mpg" name="mpg"/><label for="proposedPrice">Proposed Price</label>
-      <input type="number" id="proposedPrice" name="proposedPrice"/>
-     
-      <button type="submit">Add Car</button>
-    </form>
- 
-    
+  <h1>Car's list</h1>
+
+  <p><a href="/cars/new">Add Cars</a></p>
+
+  <% if (cars.length) { %> 
+    <% cars.forEach(car =>{ %> 
+      <h4>
+        <%= car.make %>
+      </h4>
+    <% }) %> 
+  <% } else { %> 
+    <h4>No cars found</h4>
+  <% } %> 
+  
 </body>
 </html>
