@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  background-color: #353840;
+  border: 10px white;
+}
+
+nav {
+  font-size:36px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Oleo Script', cursive;
+  margin-top: 55px;
+}
+
+form {
+  font-family: 'Oleo Script', cursive;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > label {
+  margin-bottom: 5px;
+  margin-top: 2.5px;
+}
+
+button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
