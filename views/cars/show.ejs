@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/main.css">
   <title>Car info</title>
 </head>
 <body>
+  <nav>
+    <a href="/"><h1>Buy & Drive</h1></a>
+  </nav>
   <h1>Car</h1>
+  <img src="https://picsum.photos/200/?random=1"/>
  <p>Make: <%= cars.make %> </p> 
  <p>Model: <%= cars.model %> </p> 
  <p>MPG: <%= cars.mpg %> </p> 
  <p>Miles Driven: <%= cars.milesDriven %> </p> 
  <p>Proposed Price: <%= cars.proposedPrice %> </p> 
+
+ <a href="/cars/<%= cars._id %>/edit">
+ <button>Edit</button>
+</a>
+<form action="/cars/<%= cars._id %>?_method=DELETE" method="POST">
+  <button type="submit">Delete</button>
+</form>
+
 </body>
 </html>
