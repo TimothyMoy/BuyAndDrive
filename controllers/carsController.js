@@ -60,4 +60,17 @@ router.put('/:id', (req,res)=>{
   );
 });
 
+//--Car Delete--
+router.delete('/:id', (req,res)=>{
+  db.cars.findByIdAndDelete(req.params.id, (err, deletedCar)=>{
+    db.cars.deleteMany({
+      _id:{
+        $in:deletedCar
+      }
+    }, (err,data)=>{
+      res.redirect('/cars');
+    })
+  });
+});
+
 module.exports = router;
