@@ -8,14 +8,11 @@
   <title>Profile Page</title>
 </head>
 <body>
-  <nav>
     <a href="/"><h1>Buy & Drive</h1></a>
-    <img src="https://picsum.photos/200/?random=1"/>
-    <p><%= user.name %></p>
-    <a href="/users/"><button>Sign Out</button></a>
-  </nav>
-  <main>
     <h2>Profile</h2>
+    <p><%= user.name %></p>
+    <a href="/users/"><button id="signout">Sign Out</button></a>
+  <main>
     <img src="https://picsum.photos/200/?random=1"/>
     <ul>
       <li><%= user.name %></li>
@@ -28,7 +25,6 @@
     <h3>cars</h3>
     <button>Edit cars</button>
     <img src="https://picsum.photos/200/?random=2"/>
-    <p> </p>
   </main>
 </body>
 </html>

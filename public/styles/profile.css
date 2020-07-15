@@ -1,9 +1,28 @@
 body {
-  text-align: center;
+  color: white;
   background-color: #353840;
   font-family: 'Oleo Script', cursive;
 }
 
 h1 {
+  text-align: center;
   color: white;
+  font-size: 50px;
+}
+
+h2 {
+  position: relative;
+  bottom: 60px;
+  left: 20px;
+}
+
+p {
+  bottom: 60px;
+  right: 20px;
+}
+
+#signout {
+  position: relative;
+  left: 1275px;
+  bottom: 145px;
 }
