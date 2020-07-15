@@ -50,15 +50,41 @@ form {
 }
 
 .box:hover .overlay {
-  opacity: 0.45;
+  opacity: 1;
 }
 
 .text {
   font-family: 'Merriweather Sans', sans-serif;
   color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.horsepower {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: white;
   font-size: 20px;
   position: absolute;
-  top: 50%;
+  top: 47%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.miles {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 55%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
