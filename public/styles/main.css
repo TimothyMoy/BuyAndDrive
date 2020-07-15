@@ -6,11 +6,18 @@ body {
 h1 {
   color: white;
   font-family: 'Oleo Script', cursive;
-  margin-top: 75px;
+  margin-top: 85px;
+  font-size: 40px;
+}
+
+button {
+  position: relative;
+  right: 500px;
+  bottom: 60px;
 }
 
 table {
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 td {
@@ -39,7 +46,7 @@ form {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .box:hover .overlay {
