@@ -10,14 +10,18 @@ h1 {
   font-size: 35px;
 }
 
+#username {
+  vertical-align: bottom;
+}
+
 #signout {
   position: relative;
-  left: 1300px;
+  left: 1000px;
   bottom: 100px;
 }
 
 h2 {
+  right: 1px;
   position: relative;
-  left: 40px;
-  bottom: 140px;
+  bottom: 50px;
 }
