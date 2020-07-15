@@ -54,6 +54,7 @@ form {
 }
 
 .text {
+  font-family: 'Merriweather Sans', sans-serif;
   color: white;
   font-size: 20px;
   position: absolute;
