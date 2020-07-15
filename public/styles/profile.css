@@ -7,4 +7,17 @@ body {
 h1 {
   text-align: center;
   color: white;
+  font-size: 35px;
+}
+
+#signout {
+  position: relative;
+  left: 1300px;
+  bottom: 100px;
+}
+
+h2 {
+  position: relative;
+  left: 40px;
+  bottom: 140px;
 }
