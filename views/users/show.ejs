@@ -10,7 +10,9 @@
   <nav>
     <a href="/"><h1>Buy & Drive</h1></a>
     <img src="https://picsum.photos/200/?random=1"/>
-    <p><%= user.name %></p>
+      <!-- <a href="/users/show/<%= user._id  %>"> -->
+      <p><%= user.name %></p>
+      </a>
     <a href="/users/"><button>Sign Out</button></a>
   </nav>
   <main>
@@ -21,13 +23,8 @@
       <li><%= user.email %></li>
     </ul>
     <a href="/cars">
-      <button>Sell cars</button>
+      <button>View cars</button>
     </a>
-
-    <h3>cars</h3>
-    <button>Edit cars</button>
-    <img src="https://picsum.photos/200/?random=2"/>
-    <p> </p>
   </main>
 </body>
 </html>

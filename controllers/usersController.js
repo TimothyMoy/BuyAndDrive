@@ -16,14 +16,14 @@ router.get('/signup', (req,res)=>{
 });
 
 //--User Show--
-router.get('show/:id', (req,res)=>{
-  db.users.find({}, (err, allUsers)=>{
-    if(err) return console.log(err);
-    res.render('users/show', {
-      users: allUsers,
-    });
-  });
+router.get('/show/:id', (req,res)=>{
+  db.users.findById(req.params.id, (err, foundUser) =>{
+    res.render('users/show',{
+      users: foundUser,
+    })
+  })
 });
+
 
 //--User Create--
 router.post('/show', (req,res)=>{
