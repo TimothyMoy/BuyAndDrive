@@ -1,5 +1,7 @@
 const express = require('express');
+const session = require('express-session');
 const methodOverride = require('method-override');
+require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -19,6 +21,17 @@ const authCtrl = require('./controllers/authController');
 app.set('view engine', 'ejs');
 
 app.use(express.static(`${__dirname}/public`));
+
+//--Express Session--
+app.use(session({
+  secret:process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 
+    // expires in 24hrs.
+  }
+}));
 
 //--Routes--
 app.get('/', (req,res)=>{
