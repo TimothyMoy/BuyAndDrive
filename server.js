@@ -32,7 +32,7 @@ app.use(session({
 }));
 
 app.use((req,res,next)=>{
-  if (req.url !== '/login' & req.url !== '/' && !req.session.currentUser)
+  if (req.url !== '/register' && req.url !== '/login' && req.url !== '/' && !req.session.currentUser)
   return res.redirect('/login');
   next();
 });

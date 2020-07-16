@@ -4,16 +4,19 @@ const router = express.Router();
 
 const db = require('../models');
 
+//--Login Form Route--
 router.get('/login', (req,res)=>{
   res.render('auth/login');
 });
 
+//--Register Form Route--
 router.get('/register', (req,res)=>{
   res.render('auth/register');
 });
 
+//--Login Route--
 router.post('/login', (req,res)=>{
-  db.users.findOne({email: req.body.email}, (err, foundUser)=>{
+  db.User.findOne({username: req.body.username}, (err, foundUser)=>{
     if (err) return console.log(err);
     if(!foundUser){
       return res.send('No user Found');
@@ -28,7 +31,8 @@ router.post('/login', (req,res)=>{
           isLoggedIn: true,
         }
         req.session.currentUser = currentUser;
-        res.redirect('/users/show');
+        console.log('works')
+        res.redirect('/users/profile');
       } else {
         return res.send('Passwords do not match');
       }   
@@ -36,8 +40,9 @@ router.post('/login', (req,res)=>{
   });
 });
 
+//--Register Route--
 router.post('/register', (req,res)=>{
-  db.users.findOne({email:req.body.email},
+  db.User.findOne({email:req.body.email},
   (err,foundUser) =>{
     if (err) return console.log(err);
     if (foundUser) return console.log('User already exist');
@@ -46,9 +51,9 @@ router.post('/register', (req,res)=>{
       bcrypt.hash(req.body.password,
       salt, (err,hash)=>{
         if (err) return console.log(err);
-        const{ name, email, password} = req.body;
+        const{ username, email, password} = req.body;
         const newUser = {
-          name,
+          username,
           email,
           password: hash,
         };
@@ -58,6 +63,15 @@ router.post('/register', (req,res)=>{
         });
       });
     });
+  });
+});
+
+//--Logout Route--
+router.get('/logout', (req,res) => {
+  if (!req.session.currentUser) return res.send('You must be logged in to logout');
+  req.session.destroy((err) => {
+    if(err) return console.log(err);
+    res.redirect('/login');
   });
 });
 
