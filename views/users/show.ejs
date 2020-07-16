@@ -10,8 +10,21 @@
 <body>
     <a href="/"><h1>Buy & Drive</h1></a>
     <h2>Profile</h2>
+<<<<<<< HEAD
     <a href="/users/"><button id="signout">Sign Out</button></a>
   <main>
+=======
+    <p><%= user.name %></p>
+    <a href="/users/"><button id="signout">Sign Out</button></a>
+    <img src="https://picsum.photos/200/?random=1"/>
+      <!-- <a href="/users/show/<%= user._id  %>"> -->
+      <p><%= user.name %></p>
+      </a>
+    <a href="/users/"><button>Sign Out</button></a>
+  </nav>
+  <main>
+    <img src="https://picsum.photos/200/?random=1"/>
+>>>>>>> submaster
     <ul>
       <p class="username"><img src="https://picsum.photos/200/?random=1" align="left"/>
         <li><%= user.name %></li>
@@ -19,13 +32,11 @@
       </p>
     </ul>
     <a href="/cars">
-      <button>Sell cars</button>
+      <button>View cars</button>
     </a>
-
     <h3>cars</h3>
     <button>Edit cars</button>
     <img src="https://picsum.photos/200/?random=2"/>
-    <p> </p>
   </main>
 </body>
 </html>
