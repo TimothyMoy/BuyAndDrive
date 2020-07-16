@@ -17,11 +17,11 @@ h1 {
 #signout {
   position: relative;
   left: 1000px;
-  bottom: 100px;
+  bottom: 140px;
 }
 
 h2 {
-  right: 1px;
+  left: 40px;
   position: relative;
   bottom: 50px;
 }
