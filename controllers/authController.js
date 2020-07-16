@@ -31,7 +31,6 @@ router.post('/login', (req,res)=>{
           isLoggedIn: true,
         }
         req.session.currentUser = currentUser;
-        console.log('works')
         res.redirect('/users/profile');
       } else {
         return res.send('Passwords do not match');
