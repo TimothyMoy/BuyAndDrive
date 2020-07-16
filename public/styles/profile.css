@@ -3,6 +3,10 @@ body {
   font-family: 'Oleo Script', cursive;
 }
 
+nav{
+  font-family: 'Oleo Script', cursive;
+}
+
 main{
   display: flex;
   flex-direction: column;
