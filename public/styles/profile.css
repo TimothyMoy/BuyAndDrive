@@ -72,8 +72,8 @@ h1 {
 }
 
 h2 {
-  left: 110px;
   position: relative;
+  text-align: center;
 }
 
 li {
