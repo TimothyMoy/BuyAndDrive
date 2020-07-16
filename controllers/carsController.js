@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models');
-const { route } = require('./usersController');
+const multer = require('multer');
+const upload = multer({dest:'uploads/images'});
+// const { route } = require('./usersController');
 
 // Current Path ='/cars'
 
@@ -18,6 +20,10 @@ router.get('/', (req,res)=>{
 router.get('/new',(req,res)=>{
   res.render('cars/new');
 });
+
+router.post('/cars/:id', upload.single('avatar'), function (req, res, next) {
+  console.log(req.file, req.body)
+})
 
 //--Cars Show--
 router.get('/:id', (req,res)=>{
@@ -72,6 +78,7 @@ router.delete('/:id', (req,res)=>{
     })
   });
 });
+
 
 
 module.exports = router;
