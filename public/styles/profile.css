@@ -16,12 +16,18 @@ h1 {
 
 #signout {
   position: relative;
-  left: 1000px;
-  bottom: 140px;
+  left: 1150px;
+  bottom: 105px;
 }
 
 h2 {
-  left: 40px;
+  left: 110px;
   position: relative;
   bottom: 50px;
+}
+
+li {
+  position: relative;
+  list-style-type: none;
+  margin-left: 15px;
 }
