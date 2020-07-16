@@ -11,15 +11,15 @@
   <%- include('../partials/_nav') %>
   <main>
     <h1>Add Car</h1>
-   
+
+    <img src="/<%= typeof file != 'undefined' ? file: '' %>" style="max-width: 200px;">
     <form action="/cars/upload" method="POST" enctype="multipart/form-data">
         <%= typeof msg != 'undefined' ? msg: ''  %> 
         <input type="file" name="myImage">
         <button type="submit">submit</button>
       </form>
       <br>
-      <img src="/<%= typeof file != 'undefined' ? file: '' %>" style="max-width: 200px;">
-  
+      
     <form action="/cars" method="POST">
       <label for="make">Make</label>
       <input type="text" id="name" name="make"/>

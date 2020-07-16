@@ -36,7 +36,7 @@ app.use(session({
   cookie: {
     maxAge: 1000 * 60 * 60 * 24 
     // expires in 24hrs.
-  }
+  },
 }));
 
 app.use((req,res,next)=>{
