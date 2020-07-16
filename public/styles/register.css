@@ -1,0 +1,10 @@
+body {
+  font-family: 'Oleo Script', cursive;
+  background-color: #ACACAC;
+  text-align: center;
+  color: black;
+}
+
+.text {
+  vertical-align: middle;
+}
