@@ -8,6 +8,15 @@ router.get('/', (req,res)=>{
     res.render('users/index');
   });
 
+  router.get('/profile', (req,res)=>{
+    db.User.findById(req.session.currentUser._id, (err, foundUser)=>{
+      if (err) return console.log(err);
+      res.render('users/profile', {
+        user: foundUser,
+      });
+    });
+  });
+
 
 //--User New--
 
@@ -16,18 +25,18 @@ router.get('/signup', (req,res)=>{
 });
 
 //--User Show--
-router.get('/:id', (req,res)=>{
-  db.users.find({}, (err, allUsers)=>{
-    if(err) return console.log(err);
-    res.render('users/show', {
-      users: allUsers,
-    });
-  });
+router.get('/show/:id', (req,res)=>{
+  db.User.findById(req.params.id, (err, foundUser) =>{
+    res.render('users/show',{
+      users: foundUser,
+    })
+  })
 });
 
+
 //--User Create--
-router.post('/:id', (req,res)=>{
-  db.users.create(req.body, (err, newUser)=>{
+router.post('/show', (req,res)=>{
+  db.User.create(req.body, (err, newUser)=>{
     if(err) return console.log(err);
     res.render('users/show', {
       user: newUser,
