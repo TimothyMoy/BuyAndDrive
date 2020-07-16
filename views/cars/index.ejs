@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
   <title>Car list</title>
 </head>
 <body>
-  <nav>
-    <a href="/"><h1>Buy & Drive</h1></a>
-  </nav>
+  <%- include('../partials/_nav') %>
   <h1>Car's list</h1>
 
-  <p><a href="/cars/new">Add Cars</a></p>
+  <button><a href="/cars/new">Add Cars</a></button>
 
   <% if (cars.length) { %> 
     <% cars.forEach(car =>{ %> 
