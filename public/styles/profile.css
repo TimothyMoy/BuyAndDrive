@@ -87,6 +87,11 @@ h2 {
   left: 20px;
 }
 
+ul {
+  position: relative;
+  bottom: 70px;
+}
+
 p {
   bottom: 60px;
   right: 20px;

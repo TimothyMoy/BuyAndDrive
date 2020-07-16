@@ -5,6 +5,14 @@ body {
   color: black;
 }
 
-.text {
-  vertical-align: middle;
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+form {
+  font-size: 19px;
 }
