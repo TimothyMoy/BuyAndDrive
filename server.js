@@ -6,15 +6,13 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(`${__dirname}/public`));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:false}));
 
 //--Controllers--
 const userCtrl = require('./controllers/usersController');
-
 const carsCtrl = require('./controllers/carsController');
-
 const authCtrl = require('./controllers/authController');
 
 //--View Engine Configuration--
@@ -24,7 +22,7 @@ app.use(express.static(`${__dirname}/public`));
 
 //--Express Session--
 app.use(session({
-  secret:process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: {
@@ -32,6 +30,12 @@ app.use(session({
     // expires in 24hrs.
   }
 }));
+
+app.use((req,res,next)=>{
+  if (req.url !== '/login' & req.url !== '/' && !req.session.currentUser)
+  return res.redirect('/login');
+  next();
+});
 
 //--Routes--
 app.get('/', (req,res)=>{
