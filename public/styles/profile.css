@@ -10,12 +10,6 @@ main{
   align-items: center;
 }
 
-nav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #avatarImage {
   width: 40px;
   border-radius: 50%;
@@ -25,6 +19,19 @@ nav{
 #avatarLink {
   display:flex;
   margin: 0px 16px 0px 16px;
+}
+
+#homeLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profileNav{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 16px;
 }
 
 a:link {
