@@ -16,8 +16,11 @@
   <% if (cars.length) { %> 
     <% cars.forEach(car =>{ %> 
       <a href="/cars/<%= car._id  %>">
-      <h4><%= car.make %></h4>
-    </a>
+      <div class="carContainer">
+          <img src="<%= car.img  %>" style="max-width: 200px;"/>
+          <h4><%= car.make %></h4>
+        </div>
+      </a>
     <% }) %> 
   <% } else { %> 
     <h4>No cars found</h4>
