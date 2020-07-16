@@ -2,8 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const methodOverride = require('method-override');
 require('dotenv').config();
-const multer = require('multer');
-const upload = multer({dest:'uploads/images'});
+
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -14,17 +13,13 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:false}));
 
 
-// app.post('/upload', upload.single('photo'), (req,res) => {
-//   if (req.file){
-//     res.json(req.file);
-//   }
-//   else throw 'error';
-// });
+
 
 //--Controllers--
 const userCtrl = require('./controllers/usersController');
 const carsCtrl = require('./controllers/carsController');
 const authCtrl = require('./controllers/authController');
+
 
 //--View Engine Configuration--
 app.set('view engine', 'ejs');
