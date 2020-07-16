@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/profile.css">
-   <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
   <title>Profile Page</title>
 </head>
 <body>
-  <nav>
     <a href="/"><h1>Buy & Drive</h1></a>
+    <h2>Profile</h2>
+<<<<<<< HEAD
+    <a href="/users/"><button id="signout">Sign Out</button></a>
+  <main>
+=======
+    <p><%= user.name %></p>
+    <a href="/users/"><button id="signout">Sign Out</button></a>
     <img src="https://picsum.photos/200/?random=1"/>
       <!-- <a href="/users/show/<%= user._id  %>"> -->
       <p><%= user.name %></p>
@@ -17,15 +23,20 @@
     <a href="/users/"><button>Sign Out</button></a>
   </nav>
   <main>
-    <h2>Profile</h2>
     <img src="https://picsum.photos/200/?random=1"/>
+>>>>>>> submaster
     <ul>
-      <li><%= user.name %></li>
-      <li><%= user.email %></li>
+      <p class="username"><img src="https://picsum.photos/200/?random=1" align="left"/>
+        <li><%= user.name %></li>
+        <li><%= user.email %></li>
+      </p>
     </ul>
     <a href="/cars">
       <button>View cars</button>
     </a>
+    <h3>cars</h3>
+    <button>Edit cars</button>
+    <img src="https://picsum.photos/200/?random=2"/>
   </main>
 </body>
 </html>
