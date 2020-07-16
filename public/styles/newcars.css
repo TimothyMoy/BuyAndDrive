@@ -1,10 +1,10 @@
-.text {
+body {
+  text-align: center;
+  background-color: #989494;
+  font-family: 'Oleo Script', cursive;
   color: white;
 }
 
-body {
+ul {
   text-align: center;
-  background-color: #353840;
-  font-family: 'Oleo Script', cursive;
-  color: white;
 }
