@@ -1,0 +1,18 @@
+body {
+  font-family: 'Oleo Script', cursive;
+  background-color: #ACACAC;
+  text-align: center;
+  color: black;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+form {
+  font-size: 19px;
+}

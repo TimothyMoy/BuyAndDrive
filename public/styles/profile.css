@@ -4,6 +4,11 @@ body {
   font-family: 'Oleo Script', cursive;
 }
 
+.text1 {
+  position: relative;
+  bottom: 70px;
+}
+
 nav{
   font-family: 'Oleo Script', cursive;
 }
@@ -53,4 +58,38 @@ a:hover {
 h1 {
   text-align: center;
   color: white;
+  font-size: 35px;
+}
+
+#username {
+  vertical-align: bottom;
+}
+
+#signout {
+  position: relative;
+  left: 1150px;
+  bottom: 105px;
+}
+
+h2 {
+  left: 110px;
+  position: relative;
+}
+
+li {
+  position: relative;
+  list-style-type: none;
+  margin-left: 15px;
+}
+
+
+p {
+  bottom: 60px;
+  right: 20px;
+}
+
+#signout {
+  position: relative;
+  left: 1275px;
+  bottom: 175px;
 }
