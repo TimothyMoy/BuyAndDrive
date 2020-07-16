@@ -57,7 +57,7 @@ router.post('/register', (req,res)=>{
           email,
           password: hash,
         };
-        db.users.create(newUser, (err, createdUser) => {
+        db.User.create(newUser, (err, createdUser) => {
           if(err) return console.log(err);
           res.redirect('/login');
         });

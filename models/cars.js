@@ -6,6 +6,8 @@ const carSchema = new mongoose.Schema({
   milesDriven: Number,
   mpg: Number,
   proposedPrice: Number,
+  img: 
+    { data: Buffer, contentType: String },
 },{timestamps:true})
 
 const cars = mongoose.model('cars', carSchema)
