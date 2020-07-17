@@ -11,8 +11,8 @@
   <%- include('../partials/_nav') %>
   <h1>Car's list</h1>
 
+  <div id="carslist">
   <button><a href="/cars/new">Add Cars</a></button>
-
   <% if (cars.length) { %> 
     <% cars.forEach(car =>{ %> 
       <a href="/cars/<%= car._id  %>">
@@ -25,6 +25,6 @@
   <% } else { %> 
     <h4>No cars found</h4>
   <% } %> 
-
+</div>
 </body>
 </html>

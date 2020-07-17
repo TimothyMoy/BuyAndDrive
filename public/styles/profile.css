@@ -72,7 +72,6 @@ h1 {
 }
 
 h2 {
-  left: 110px;
   position: relative;
 }
 
@@ -92,4 +91,32 @@ p {
   position: relative;
   left: 1275px;
   bottom: 175px;
+}
+
+#carslist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+#carsShow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#editCars{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

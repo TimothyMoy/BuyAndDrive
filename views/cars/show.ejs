@@ -11,6 +11,7 @@
   <%- include('../partials/_nav') %>
   <a href="/cars/">Back to Car's list</a>
   <h1>Car Details</h1>
+  <div id="carsShow"> 
  <img src="<%= cars.img  %> " style="max-width: 200px;"/>
  <p>Make: <%= cars.make %> </p> 
  <p>Model: <%= cars.model %> </p> 
@@ -24,6 +25,7 @@
 <form action="/cars/<%= cars._id %>?_method=DELETE" method="POST">
   <button type="submit">Delete</button>
 </form>
+</div>
 
 </body>
 </html>
