@@ -61,3 +61,4 @@ app.use('/cars', carsCtrl);
 
 //--Server Listener--
 app.listen(PORT,()=> console.log(`This server is running on port ${PORT}`));
+app.listen(process.env.PORT || 4000)
