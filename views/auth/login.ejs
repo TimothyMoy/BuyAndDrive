@@ -14,15 +14,15 @@
   <main>
     <!--Should be sign in page-->
     <h1>Sign In</h1>
-    <form action="/users/show" method="POST">
-      <label for="name">Username</label>
-      <input type="text" id="name" name="name"/>
-      <label for="email">email</label>
-      <input type="text" id="email" name="email"/>
+    <form action="/login" method="POST">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username"/>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password"/>
       
       <button type="submit">Sign In</button>
     </form>
-    <a href="/users/signup">If you don't have an account sign up here!</a>
+    <a href="/register">If you don't have an account sign up here!</a>
     
 </body>
 </html>

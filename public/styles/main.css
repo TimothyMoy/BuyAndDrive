@@ -6,11 +6,18 @@ body {
 h1 {
   color: white;
   font-family: 'Oleo Script', cursive;
-  margin-top: 75px;
+  margin-top: 85px;
+  font-size: 40px;
+}
+
+button {
+  position: relative;
+  right: 500px;
+  bottom: 60px;
 }
 
 table {
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 td {
@@ -24,19 +31,64 @@ form {
   align-items: center;
 }
 
-.overlay {
-  position: absolute;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
+.box {
+  position: relative;
+  width: 100%;
 }
 
-.container1:hover .overlay {
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box:hover .overlay {
   opacity: 1;
 }
 
 .text {
+  font-family: 'Merriweather Sans', sans-serif;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.horsepower {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.miles {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+

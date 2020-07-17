@@ -2,37 +2,14 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
-//--User Index--
-
-router.get('/', (req,res)=>{
-    res.render('users/index');
-  });
-
-
-//--User New--
-
-router.get('/signup', (req,res)=>{
-  res.render('users/new');
-});
-
-//--User Show--
-router.get('/:id', (req,res)=>{
-  db.users.find({}, (err, allUsers)=>{
-    if(err) return console.log(err);
-    res.render('users/show', {
-      users: allUsers,
+//--User Profile--
+  router.get('/profile', (req,res)=>{
+    db.User.findById(req.session.currentUser._id, (err, foundUser)=>{
+      if (err) return console.log(err);
+      res.render('users/profile', {
+        user: foundUser,
+      });
     });
   });
-});
-
-//--User Create--
-router.post('/:id', (req,res)=>{
-  db.users.create(req.body, (err, newUser)=>{
-    if(err) return console.log(err);
-    res.render('users/show', {
-      user: newUser,
-    });
-  });
-});
 
 module.exports = router;

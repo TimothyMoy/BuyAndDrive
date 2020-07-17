@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+  <title>Car info</title>
+</head>
+<body>
+  <%- include('../partials/_nav') %>
+  <a href="/cars/">Back to Car's list</a>
+  <h1>Car Details</h1>
+ <img src="<%= cars.img  %> " style="max-width: 200px;"/>
+ <p>Make: <%= cars.make %> </p> 
+ <p>Model: <%= cars.model %> </p> 
+ <p>MPG: <%= cars.mpg %> </p> 
+ <p>Miles Driven: <%= cars.milesDriven %> </p> 
+ <p>Proposed Price: <%= cars.proposedPrice %> </p> 
+
+ <a href="/cars/<%= cars._id %>/edit">
+ <button>Edit</button>
+</a>
+<form action="/cars/<%= cars._id %>?_method=DELETE" method="POST">
+  <button type="submit">Delete</button>
+</form>
+
+</body>
+</html>

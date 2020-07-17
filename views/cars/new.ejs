@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/newcars.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+  <title>Add Car</title>
+</head>
+<body>
+  <%- include('../partials/_nav') %>
+  <main>
+    <h1>Add Car</h1>
+
+    <img src="/<%= typeof file != 'undefined' ? file: '' %>" style="max-width: 200px;">
+    <form action="/cars/upload" method="POST" enctype="multipart/form-data">
+        <%= typeof msg != 'undefined' ? msg: ''  %> 
+        <input type="file" name="myImage">
+        <button type="submit">submit</button>
+      </form>
+      <br>
+      
+    <form action="/cars" method="POST">
+     <ul style="list-style: none;">
+       <li><label for="make">Make</label></li>
+       <li><input type="text" id="name" name="make"/></li>
+       <li><label for="model">Model</label></li>
+       <li><input type="text" id="name" name="model"/></li>
+       <li><label for="milesDriven">Miles driven</label></li>
+       <li><input type="number" id="milesDriven" name="milesDriven"/></li>
+       <li><label for="mpg">MPG</label></li>
+       <li><input type="number" id="mpg" name="mpg"/></li>
+       <li><label for="proposedPrice">Proposed Price</label></li>
+       <li><input type="number" id="proposedPrice" name="proposedPrice"/></li>
+       <li><label for="img">Image link will be generated from upload</label></li>
+       <li><input type="text" id="img" name="img" value="/<%= typeof file != 'undefined' ? file: '' %>"/></li>
+       </ul>
+      <button type="submit" value="upload">Add Car</button>
+
+    
+ 
+    
+</body>
+</html>

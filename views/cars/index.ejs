@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+  <title>Car list</title>
+</head>
+<body>
+  <%- include('../partials/_nav') %>
+  <h1>Car's list</h1>
+
+  <button><a href="/cars/new">Add Cars</a></button>
+
+  <% if (cars.length) { %> 
+    <% cars.forEach(car =>{ %> 
+      <a href="/cars/<%= car._id  %>">
+      <div class="carContainer">
+          <img src="<%= car.img  %>" style="max-width: 200px;"/>
+          <h4><%= car.make %></h4>
+        </div>
+      </a>
+    <% }) %> 
+  <% } else { %> 
+    <h4>No cars found</h4>
+  <% } %> 
+
+</body>
+</html>
