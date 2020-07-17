@@ -12,8 +12,8 @@
   <a href="/cars/<%= cars._id %>">Back to car detail</a>
   <main>
     <h1>Edit Car</h1>
-   
-    <form action="/cars/<%= cars._id %>?_method=PUT " method="POST">
+ 
+    <form action="/cars/<%= cars._id %>?_method=PUT " method="POST" id="editCars">
       <label for="make">Make</label>
       <input type="text" id="name" name="make" value="<%= cars.make %>"/>
       <label for="model">Model</label>
@@ -26,6 +26,7 @@
       
       <button type="submit">Edit Car</button>
     </form>
+
   </main>
 </body>
 </html>
