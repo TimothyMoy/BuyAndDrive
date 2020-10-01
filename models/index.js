@@ -17,8 +17,6 @@ module.exports={
   cars: require('./cars'),
 };
 
-const PORT = process.env.PORT || 4000;
-.
-.
-.
+const PORT = process.env.PORT ;
+
 app.listen(PORT, () => console.log(`API started on port ${PORT}`));
