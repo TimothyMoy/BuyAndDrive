@@ -5,7 +5,7 @@ require('dotenv').config();
 
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 
 
@@ -52,13 +52,10 @@ app.get('/', (req,res)=>{
 
 //--User Routes--
 app.use('/', authCtrl);
-
 app.use('/users', userCtrl);
-
 app.use('/cars', carsCtrl);
 
 
 
 //--Server Listener--
 app.listen(PORT,()=> console.log(`This server is running on port ${PORT}`));
-app.listen(process.env.PORT)

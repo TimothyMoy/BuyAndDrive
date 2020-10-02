@@ -16,7 +16,3 @@ module.exports={
   User: require('./users'),
   cars: require('./cars'),
 };
-
-const PORT = process.env.PORT ;
-
-app.listen(PORT, () => console.log(`API started on port ${PORT}`));
