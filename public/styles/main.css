@@ -92,3 +92,6 @@ form {
   text-align: center;
 }
 
+.navbar {
+  display:flex
+}
