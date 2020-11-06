@@ -1,49 +1,52 @@
-body {
-  text-align: center;
-  background-color: #353840;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 h1 {
-  color: white;
   font-family: 'Oleo Script', cursive;
   margin-top: 85px;
   font-size: 40px;
 }
 
-button {
-  position: relative;
-  right: 500px;
-  bottom: 60px;
-}
+/* Nav section */
 
-table {
-  margin-top: 15px;
-}
-
-td {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-form {
+.navbar {
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  justify-content: center;
+}
+
+/* cars section */
+
+.cars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  margin: 16px;
 }
 
 .box {
   position: relative;
-  width: 100%;
+  margin: 8px;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   height: 100%;
   width: 100%;
+  top: 0;
+  z-index: 1;
   opacity: 0;
   transition: .5s ease;
   background-color: rgba(0, 0, 0, 0.5);
@@ -55,8 +58,8 @@ form {
 
 .text {
   font-family: 'Merriweather Sans', sans-serif;
-  color: white;
   font-size: 30px;
+  color: white;
   position: absolute;
   top: 35%;
   left: 50%;
@@ -90,8 +93,4 @@ form {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.navbar {
-  display:flex
 }
