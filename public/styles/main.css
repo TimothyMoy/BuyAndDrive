@@ -6,7 +6,6 @@
 
 h1 {
   font-family: 'Oleo Script', cursive;
-  margin-top: 85px;
   font-size: 40px;
 }
 
@@ -14,16 +13,37 @@ h1 {
 
 .navbar {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   margin-left: 2%;
   margin-right: 2%;
+  height: 60px;
+ 
+}
+
+.logo {
+  color: darkblue;
+}
+
+#homeLink {
+  text-decoration: none;
 }
 
 /* Hero section */
 .hero {
   display: flex;
-  justify-content: center;
+  height: 400px;
+  background-position: center;
+  background-image: url('https://images.unsplash.com/photo-1545901728-0e19765d1e0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');
+  position: relative;
+  background-size: cover;
+}
+
+.title {
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 36px;
+  color: #fafcfc;
 }
 
 /* cars section */
