@@ -9,6 +9,16 @@ h1 {
   font-size: 40px;
 }
 
+.btn {
+  border: none;
+  border-radius: 8px;
+  height: 60px;
+  width: 200px;
+  position: absolute;
+  top: 200px;
+  left: 40px;
+}
+
 /* Nav section */
 
 .navbar {
