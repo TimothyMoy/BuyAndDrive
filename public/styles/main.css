@@ -19,6 +19,13 @@ h1 {
   left: 40px;
 }
 
+.button {
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  width: 120px;
+}
+
 /* Nav section */
 
 .navbar {
