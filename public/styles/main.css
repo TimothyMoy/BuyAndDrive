@@ -131,3 +131,31 @@ h1 {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+
+/* login/register */
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+form {
+  font-family: 'Oleo Script', cursive;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+form > label {
+  margin-bottom: 5px;
+  margin-top: 2.5px;
+}
+
+.formBtn {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
